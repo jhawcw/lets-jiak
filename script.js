@@ -24,7 +24,72 @@ const workInProgress = () => {
   );
 };
 
-workInProgress();
+const headerEL = document.querySelector(".header");
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEL = document.querySelector(href);
+      sectionEL.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (link.classList.contains("main-nav-link")) {
+      headerEL.classList.toggle("nav-open");
+    }
+  });
+});
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    // console.log(ent);
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+
+observer.observe(sectionHeroEl);
+
+let target = document.getElementById("header");
+let menuBtn = document.getElementById("menu-btn");
+let closeBtn = document.getElementById("close-btn");
+let copyRightYear = document.getElementById("year");
+
+copyRightYear.innerHTML = new Date().getFullYear();
+
+function showMenu() {
+  target.setAttribute("class", "header nav-open");
+}
+
+function closeMenu() {
+  target.setAttribute("class", "header");
+}
+
+menuBtn.addEventListener("click", showMenu);
+closeBtn.addEventListener("click", closeMenu);
+
+// workInProgress();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 

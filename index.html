@@ -12,23 +12,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
   </head>
   <body>
-    <header class="header">
-      <img
-        class="logo"
-        src="content/img/omnifood-logo.png"
-        alt="Lets-jiak logo"
-      />
+    <header class="header" id="header">
+      <a href="#">
+        <img
+          class="logo"
+          src="content/img/Let's Jiak logo.png"
+          alt="Lets-jiak logo"
+        />
+      </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">Section 1</a></li>
-          <li><a href="#" class="main-nav-link">Section 1</a></li>
-          <li><a href="#" class="main-nav-link">Section 1</a></li>
-          <li><a href="#" class="main-nav-link">Section 1</a></li>
-          <li><a href="#" class="main-nav-link nav-cta">Section 1</a></li>
+          <li><a href="#how" class="main-nav-link">How it works</a></li>
+          <li><a href="#meals" class="main-nav-link">Meals</a></li>
+          <li><a href="#testimonials" class="main-nav-link">Testimonials</a></li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li><a href="#cta" class="main-nav-link nav-cta">Try for free!</a></li>
         </ul>
       </nav>
+      <button class="btn-mobile-nav" >
+        <ion-icon name="menu-outline" class="icon-mobile-nav" id="menu-btn"></ion-icon><ion-icon name="close-outline" class="icon-mobile-nav" id="close-btn"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -48,8 +54,8 @@
             satisfied customers and revolutionize your approach to healthy
             eating today! -->
             </p>
-            <a href="#" class="btn btn--full margin-right-sm">Lets-Jiak</a>
-            <a href="#" class="btn btn--outline"> Learn more &darr;</a>
+            <a href="#cta" class="btn btn--full margin-right-sm">Lets-Jiak</a>
+            <a href="#how" class="btn btn--outline"> Learn more &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img
@@ -113,7 +119,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -129,7 +135,7 @@
               Tell us what you like (and what not)
             </h3>
             <p class="step-description">
-              Never again waste time thinking about what to eat! Omnifood AI
+              Never again waste time thinking about what to eat! Let's Jiak AI
               will create a 100% personalized weekly meal plan just for you. It
               makes sure you get all the nutrients and vitamins you need, no
               matter what diet you follow!
@@ -153,27 +159,22 @@
           </div>
           <div class="step-text-box">
             <p class="step-number">02</p>
-            <h3 class="heading-tertiary">
-              Tell us what you like (and what not)
-            </h3>
+            <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
             <p class="step-description">
-              Approve your weekly meal plan: Once per week, approve the meal
-              plan generated for you by Omnifood AI. You can change ingredients,
-              swap entire meals, or even add your own recipes.
+              Once per week, approve the meal plan generated for you by Let's
+              Jiak AI. You can change ingredients, swap entire meals, or even
+              add your own recipes.
             </p>
           </div>
 
           <!-- Step 03 -->
           <div class="step-text-box">
             <p class="step-number">03</p>
-            <h3 class="heading-tertiary">
-              Tell us what you like (and what not)
-            </h3>
+            <h3 class="heading-tertiary">Receive meals at convenient time</h3>
             <p class="step-description">
-              Receive meals at convenient time: Best chefs in town will cook
-              your selected meal every day, and we will deliver it to your door
-              whenever works best for you. You can change delivery schedule and
-              address daily!
+              Best chefs in town will cook your selected meal every day, and we
+              will deliver it to your door whenever works best for you. You can
+              change delivery schedule and address daily!
             </p>
           </div>
           <div class="step-img-box">
@@ -185,7 +186,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -303,7 +304,396 @@
           <a href="#" class="link">See all recipes &rarr;</a>
         </div>
       </section>
+
+      <section class="section-testimonials grid grid--2-cols" id="testimonials">
+        <div class="testimonials-container">
+          <span class="subheading">Testimonials</span>
+          <h2 class="heading-secondary">Once you try it, you can't go back</h2>
+
+          <div class="testimonials">
+            <figure class="testimonial">
+              <img
+                src="content/img/customers/dave.jpg"
+                class="testimonial-img"
+                alt="photo of customer dave Bryson"
+              />
+              <blockquote class="testimonial-text">
+                Inexpensive, healthy and great-tasting meals, without even
+                having to order manually! It feels truly magical.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Dave Bryson</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                src="content/img/customers/ben.jpg"
+                class="testimonial-img"
+                alt="photo of customer Ben Hadley"
+              />
+              <blockquote class="testimonial-text">
+                The AI algorithm is crazy good, it chooses the right meals for
+                me every time. It's amazing not to worry about food anymore!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Ben Hadley</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                src="content/img/customers/steve.jpg"
+                class="testimonial-img"
+                alt="photo of customer Steve Miller"
+              />
+              <blockquote class="testimonial-text">
+                Let's Jiak is a life saver! I just started a company, so there's
+                no time for cooking. I couldn't live without my daily meals now!
+              </blockquote>
+              <p class="testimonial-name">&mdash; Steve Miller</p>
+            </figure>
+
+            <figure class="testimonial">
+              <img
+                src="content/img/customers/hannah.jpg"
+                class="testimonial-img"
+                alt="photo of customer Hannah Smith"
+              />
+              <blockquote class="testimonial-text">
+                I got Let's Jiak for the whole family, and it frees up so much
+                time! Plus, everything is organic and vegan and without plastic.
+              </blockquote>
+              <p class="testimonial-name">&mdash; Hannah Smith</p>
+            </figure>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-1.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-2.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-3.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-4.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-5.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-6.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-7.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-8.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-9.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-10.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-11.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+          <figure class="gallery-item">
+            <img
+              src="content/img/gallery/gallery-12.jpg"
+              alt="Photo of beautifully arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </figure>
+        </div>
+      </section>
+      <section class="section-pricing" id="pricing">
+        <div class="container">
+          <span class="subheading">Pricing</span>
+          <h2 class="heading-secondary">
+            Eating well without breaking the bank
+          </h2>
+        </div>
+        <div class="container grid grid--2-cols margin-bottom-md">
+          <div class="pricing-plan pricing-plan--starter">
+            <header class="plan-header">
+              <p class="plan-name">Starter</p>
+              <p class="plan-price"><span>$</span>399</p>
+              <p class="plan-text">per month,that's just $13 per meal</p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> 1 meal per day </span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> Order from 11am and 9pm </span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> Delivery is free </span>
+              </li>
+              <li class="list-item">
+                <ion-icon name="close-outline" class="list-icon"></ion-icon
+                ><span> Get access to latest recipes </span>
+              </li>
+            </ul>
+            <div class="plan-sign-up">
+              <a href="#" class="btn btn--full">Lets-Jiak</a>
+            </div>
+          </div>
+
+          <div class="pricing-plan pricing-plan--complete">
+            <header class="plan-header">
+              <p class="plan-name">Complete</p>
+              <p class="plan-price"><span>$</span>649</p>
+              <p class="plan-text">per month,that's just $11 per meal</p>
+            </header>
+            <ul class="list">
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> <strong>2</strong> meals per day </span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> Order <strong>24/7</strong> </span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> Delivery is free </span>
+              </li>
+              <li class="list-item">
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span> Get access to latest recipes </span>
+              </li>
+            </ul>
+            <div class="plan-sign-up">
+              <a href="#" class="btn btn--full">Lets-Jiak</a>
+            </div>
+          </div>
+        </div>
+        <div class="container grid">
+          <aside class="plan-details">
+            Prices include all applicable taxes. YOU can cancel at any time.
+            Both plans include the following:
+          </aside>
+        </div>
+
+        <div class="container grid grid--4-cols">
+          <div class="feature">
+            <ion-icon name="infinite-outline" class="feature-icon"></ion-icon>
+            <p class="feature-title">Never cook again!</p>
+            <p class="feature-text">
+              Our subscriptions cover 365 days per year, even including major
+              holidays
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon name="storefront-outline" class="feature-icon"></ion-icon>
+            <p class="feature-title">Local and organic</p>
+            <p class="feature-text">
+              Our cooks only use local, fresh, and organic products to prepare
+              your meals
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon name="leaf-outline" class="feature-icon"></ion-icon>
+            <p class="feature-title">No waste</p>
+            <p class="feature-text">
+              All our partners only use reusable containers to package all your
+              meals
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon name="airplane-outline" class="feature-icon"> </ion-icon>
+            <p class="feature-title">Pause anytime</p>
+            <p class="feature-text">
+              Going on vacation? Just pause your subscription, and we refund
+              unused days
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-cta" id="cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">Get your first meal for free!</h2>
+              <p class="cta-text">
+                Healthy, tasty and hassle-free meals are waiting for you. Start
+                eating well today. You can cancel or pause anytime. And the
+                first meal is on us!
+              </p>
+
+              <form class="cta-form" action="#">
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="Ben Wong"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email Address</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="me@email.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Where did you hear about us?</label>
+                  <select name="" id="select-where" required>
+                    <option value="">Please choose one option</option>
+                    <option value="friends">Friends & Family</option>
+                    <option value="youtube">Youtube</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">Sign up now</button>
+              </form>
+            </div>
+            <div class="cta-img-box" role="img" aria-label="woman enjoing food">
+              image
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              class="logo"
+              src="content/img/Let's Jiak logo.png"
+              alt="Lets-jiak logo"
+            />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-instagram" class="social-icon"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-facebook" class="social-icon"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="footer-link"
+                ><ion-icon name="logo-twitter" class="social-icon"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span id="year">2027</span> by Let's Jiak Pte Ltd, All rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <addrebr class="contacts">
+            <p>Woodlands St. 22, 03-112, Singapore 733004</p> <br/>
+            <p>
+              <a href="tel:+65 6123 4567" class="footer-link">+65 6123 4567</a>
+            </p>
+            <p>
+              <a href="mailto:sales@letsjiak.com" class="footer-link"
+                >sales@letsjiak.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">Create account</a></li>
+            <li><a href="#" class="footer-link">Sign in</a></li>
+            <li><a href="#" class="footer-link">iOS App</a></li>
+            <li><a href="#" class="footer-link">Android App</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">About Let's Jiak</a></li>
+            <li><a href="#" class="footer-link">For Business</a></li>
+            <li><a href="#" class="footer-link">Cooking partners</a></li>
+            <li><a href="#" class="footer-link">Careers</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">Recipe directory</a></li>
+            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="#" class="footer-link">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -312,5 +702,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="script.js"></script>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
   </body>
 </html>
